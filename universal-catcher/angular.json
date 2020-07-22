@@ -1,0 +1,47 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "universal-catcher": {
+      "projectType": "library",
+      "root": "projects/universal-catcher",
+      "sourceRoot": "projects/universal-catcher/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/universal-catcher/tsconfig.lib.json",
+            "project": "projects/universal-catcher/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/universal-catcher/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/universal-catcher/src/test.ts",
+            "tsConfig": "projects/universal-catcher/tsconfig.spec.json",
+            "karmaConfig": "projects/universal-catcher/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/universal-catcher/tsconfig.lib.json",
+              "projects/universal-catcher/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "universal-catcher"
+}
