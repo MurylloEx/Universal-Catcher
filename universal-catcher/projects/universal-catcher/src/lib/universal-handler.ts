@@ -52,11 +52,11 @@ export class UniversalHandler implements ErrorHandler {
             } catch(e){}
         }
 
-        console.log(`%c[%cINFO%c] Uma exceção não-tratada ocorreu, veja mais informações abaixo.`, 'font-weight: bold;', 'font-weight: bold; color: green;', 'font-weight: bold; color: black;');
-        console.log(`%c[%cERRO%c] ${message}`, 'font-weight: bold;', 'font-weight: bold; color: red;', 'font-weight: bold; color: black;');
-        console.log(`%c[%cRASTREIO%c] O erro foi rastreado até a sua origem, conforme a tabela a seguir:`, 'font-weight: bold;', 'font-weight: bold; color: orange;', 'font-weight: bold; color: black;');
+        console.log(`%c[%cINFO%c] %cUma exceção não-tratada ocorreu, veja mais informações abaixo.`, 'font-weight: bold;', 'font-weight: bold; color: green;', 'font-weight: bold; color: black;', 'font-weight: bold; color: black;');
+        console.log(`%c[%cERRO%c] %c${message}`, 'font-weight: bold;', 'font-weight: bold; color: red;', 'font-weight: bold; color: black;', 'font-weight: bold; color: black;');
+        console.log(`%c[%cRASTREIO%c] %cO erro foi rastreado até a sua origem, conforme a tabela a seguir:`, 'font-weight: bold;', 'font-weight: bold; color: orange;', 'font-weight: bold; color: black;', 'font-weight: bold; color: black;');
         console.table(beauty[0]);
-        console.log(`%c[%cRASTREIO%c] Todos os locais afetados pelo erro (pilha de rastreio):`, 'font-weight: bold;', 'font-weight: bold; color: orange;', 'font-weight: bold; color: black;');
+        console.log(`%c[%cRASTREIO%c] %cTodos os locais afetados pelo erro (pilha de rastreio):`, 'font-weight: bold;', 'font-weight: bold; color: orange;', 'font-weight: bold; color: black;', 'font-weight: bold; color: black;');
         console.table(beauty);
 
         return UniversalHandler.runCatcher(err, {
