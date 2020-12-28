@@ -46,17 +46,8 @@ export class AppModule { }
 
 ``> HOME.PAGE.TS``
 ```typescript
-import { Component, OnInit } from "@angular/core";
-import { WebSettingsService, WebResponses, WebRequestsService } from "@rebase-team/lib-aluno-upe";
-import { Storage } from "@ionic/storage";
-import { ValidatorService } from "src/app/services/validator.service";
-import { NavController } from "@ionic/angular";
-import { CryptoService } from "src/app/services/crypto.service";
-import { DefineUserService } from "src/app/services/define-user.service";
-import { DataUserService } from "src/app/services/data-user.service";
-import { AlertService } from "src/app/services/alert.service";
+import { Component } from "@angular/core";
 import { UniversalCatcherService } from "@rebase-team/universal-catcher";
-import { UpdateVersionService } from "src/app/services/update-version.service";
 import { AppModule } from 'src/app/app.module';
 
 @Component({
