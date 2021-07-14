@@ -20,26 +20,6 @@
               "tsConfig": "projects/universal-catcher/tsconfig.lib.prod.json"
             }
           }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/universal-catcher/src/test.ts",
-            "tsConfig": "projects/universal-catcher/tsconfig.spec.json",
-            "karmaConfig": "projects/universal-catcher/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/universal-catcher/tsconfig.lib.json",
-              "projects/universal-catcher/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     }},
